@@ -35,9 +35,13 @@ class Member(models.Model):
   investment_requirement = models.IntegerField()
   monthly_revenue = models.IntegerField()
   name = models.CharField(max_length=255)
-  designation = models.CharField(max_length=255)
+  designation = models.CharField(max_length=255, blank=True, null=True)
   email = models.EmailField()
   phone_number = models.CharField(max_length=20)
-  linkedin = models.CharField(max_length=100)
-  website = models.CharField(max_length=100)
-  additional_documents = models.FileField(upload_to='document')
+  linkedin = models.CharField(max_length=100, blank=True, null=True)
+  website = models.CharField(max_length=100, blank=True, null=True)
+  additional_documents = models.FileField(upload_to='document', blank=True, null=True)
+
+
+  def __str__(self):
+    return str(self.startup_name)

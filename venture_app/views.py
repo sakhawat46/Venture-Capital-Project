@@ -1,5 +1,6 @@
-from django.shortcuts import render, HttpResponse
-
+from django.shortcuts import render, HttpResponse, HttpResponseRedirect
+from django.urls import reverse
+from venture_app.forms import MemberForm
 # Create your views here.
 
 
@@ -25,3 +26,20 @@ def news(request):
 
 def investment_process(request):
     return render(request, 'venture_app/investment_process.html', context={})
+
+
+
+def get_investment(request):
+    form = MemberForm()
+    registered = False
+    if request.method == "POST":
+        form = MemberForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            registered = True
+            
+            # form = MemberForm()
+
+            return HttpResponseRedirect(reverse('venture_app:get_investment'))
+    diction = {'form':form, 'registered':registered}
+    return render(request,'venture_app/get_investment.html', context = diction)

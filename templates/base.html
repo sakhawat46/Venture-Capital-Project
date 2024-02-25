@@ -55,7 +55,7 @@
           <li class="dropdown"><a class="nav-link scrollto" href="#about"> <span> About Us </span><i class="bi bi-chevron-down"></i></a>
 
           <ul>
-            <li><a href="#">Who We Are</a></li>
+            {% comment %} <li><a href="#">Who We Are</a></li> {% endcomment %}
             <li><a href="#">Our Purpose</a></li>
             <li><a href="{% url "venture_app:people" %}">Pepole</a></li>
           </ul>
@@ -84,12 +84,12 @@
             <ul>
               <li><a href="{% url "venture_app:news" %}">News</a></li>
               <li><a href="#">Gallery</a></li>
-              <li><a href="#">Events</a></li>
+              {% comment %} <li><a href="#">Events</a></li> {% endcomment %}
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#contact">Invest Now</a></li>
-          <li><a class="nav-link scrollto" href="#team">Get Investment</a></li>
-          <li><a class="getstarted scrollto" href="#about">Account</a></li>
+          <li><a class="nav-link getstarted scrollto" href="{% url "venture_app:get_investment" %}">Get Investment</a></li>
+          {% comment %} <li><a class="getstarted scrollto" href="#about">Account</a></li> {% endcomment %}
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

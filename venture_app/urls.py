@@ -10,5 +10,6 @@ urlpatterns = [
     path('portfolio/', views.portfolio, name='portfolio'),
     path('news/', views.news, name='news'),
     path('investment-process/', views.investment_process, name='investment_process'),
+    path('get-investment/', views.get_investment, name='get_investment'),
 
 ]
