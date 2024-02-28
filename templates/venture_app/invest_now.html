@@ -12,7 +12,7 @@
 
 
     <div class="alert alert-warning alert-dismissible fade show" style="margin-left: 25%; margin-right: 25%; margin-top: 5%;" role="alert">
-        <strong>Applay Successfully Completed!</strong>
+        <strong>Successfully Completed!</strong>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
 
@@ -22,12 +22,12 @@
 
 <div class="container" style="background-color: rgb(230, 230, 230);">
     <section class="m-5">
-        <h2 class="text-center">Apply For Investment</h2> 
+        <h2 class="text-center">Let's Get in Touch</h2> 
         <form method="post">
             {% csrf_token %}
             {{ form|crispy }}
             <div class="text-center">
-                <input type="submit" class="btn btn-primary" value="Applay">
+                <input type="submit" class="btn btn-success" value="Submit">
             </div>
         </form>
     </section>

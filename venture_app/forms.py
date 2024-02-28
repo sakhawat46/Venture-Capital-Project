@@ -1,5 +1,5 @@
 from django import forms
-from venture_app.models import Member
+from venture_app.models import Member, Investor
 
 
 class MemberForm(forms.ModelForm):
@@ -13,5 +13,12 @@ class MemberForm(forms.ModelForm):
 
     class Meta:
         model = Member
+        # fields = ['tour_place', 'name', 'mobile_number', 'arrivals', 'leaving']
+        fields = '__all__'
+
+
+class InvestorForm(forms.ModelForm):
+    class Meta:
+        model = Investor
         # fields = ['tour_place', 'name', 'mobile_number', 'arrivals', 'leaving']
         fields = '__all__'

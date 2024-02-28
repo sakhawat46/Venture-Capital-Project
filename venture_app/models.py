@@ -19,7 +19,7 @@ class Member(models.Model):
     )
   industry = models.IntegerField(choices=industry_name)
   
-  product_description = models.CharField(max_length=1000)
+  product_description = models.TextField()
 
   stage_name = (
         (1, "Pre-Seed"),
@@ -45,3 +45,15 @@ class Member(models.Model):
 
   def __str__(self):
     return str(self.startup_name)
+  
+
+class Investor(models.Model):
+  name = models.CharField(max_length=255)
+  organigation = models.CharField(max_length=255, blank=True, null=True)
+  email = models.EmailField()
+  phone_number = models.CharField(max_length=20)
+  message = models.TextField()
+
+
+  def __str__(self):
+    return str(self.name)
