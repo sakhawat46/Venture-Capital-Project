@@ -29,6 +29,12 @@ def investment_process(request):
     return render(request, 'venture_app/investment_process.html', context={})
 
 
+def our_purpose(request):
+    return render(request, 'venture_app/our_purpose.html', context={})
+
+def our_business(request):
+    return render(request, 'venture_app/our_business.html', context={})
+
 
 def get_investment(request):
     form = MemberForm()

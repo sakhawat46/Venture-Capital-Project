@@ -12,5 +12,7 @@ urlpatterns = [
     path('investment-process/', views.investment_process, name='investment_process'),
     path('get-investment/', views.get_investment, name='get_investment'),
     path('invest-now/', views.invest_now, name='invest_now'),
+    path('our-purpose/', views.our_purpose, name='our_purpose'),
+    path('our-business/', views.our_business, name='our_business'),
 
 ]
