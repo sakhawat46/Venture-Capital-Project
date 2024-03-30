@@ -3,8 +3,395 @@
 {%load static %}
 {% block body %}
 
+<style>
+    .ag-format-container {
+        width: 1142px;
+        margin: 0 auto;
+    }
+
+
+    /* body {
+  background-color: #000;
+} */
+    .ag-courses_box {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        padding: 50px 0;
+    }
+
+    .ag-courses_item {
+        -ms-flex-preferred-size: calc(33.33333% - 30px);
+        flex-basis: calc(33.33333% - 30px);
+
+        margin: 0 15px 30px;
+
+        overflow: hidden;
+
+        border-radius: 28px;
+    }
+
+    .ag-courses-item_link {
+        display: block;
+        padding: 30px 20px;
+        background-color: #121212;
+
+        overflow: hidden;
+
+        position: relative;
+    }
+
+    .ag-courses-item_link:hover,
+    .ag-courses-item_link:hover .ag-courses-item_date {
+        text-decoration: none;
+        color: #FFF;
+    }
+
+    .ag-courses-item_link:hover .ag-courses-item_bg {
+        -webkit-transform: scale(10);
+        -ms-transform: scale(10);
+        transform: scale(10);
+    }
+
+    .ag-courses-item_title {
+        min-height: 87px;
+        margin: 0 0 25px;
+
+        overflow: hidden;
+
+        font-weight: bold;
+        font-size: 30px;
+        color: #FFF;
+
+        z-index: 2;
+        position: relative;
+    }
+
+    .ag-courses-item_date-box {
+        font-size: 18px;
+        color: #FFF;
+
+        z-index: 2;
+        position: relative;
+    }
+
+    .ag-courses-item_date {
+        font-weight: bold;
+        color: #f9b234;
+
+        -webkit-transition: color .5s ease;
+        -o-transition: color .5s ease;
+        transition: color .5s ease
+    }
+
+    .ag-courses-item_bg {
+        height: 128px;
+        width: 128px;
+        background-color: #f9b234;
+
+        z-index: 1;
+        position: absolute;
+        top: -75px;
+        right: -75px;
+
+        border-radius: 50%;
+
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+    }
+
+    .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+        background-color: #3ecd5e;
+    }
+
+    .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+        background-color: #e44002;
+    }
+
+    .ag-courses_item:nth-child(4n) .ag-courses-item_bg {
+        background-color: #952aff;
+    }
+
+    .ag-courses_item:nth-child(5n) .ag-courses-item_bg {
+        background-color: #cd3e94;
+    }
+
+    .ag-courses_item:nth-child(6n) .ag-courses-item_bg {
+        background-color: #4c49ea;
+    }
+
+
+
+    @media only screen and (max-width: 979px) {
+        .ag-courses_item {
+            -ms-flex-preferred-size: calc(50% - 30px);
+            flex-basis: calc(50% - 30px);
+        }
+
+        .ag-courses-item_title {
+            font-size: 24px;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .ag-format-container {
+            width: 96%;
+        }
+
+    }
+
+    @media only screen and (max-width: 639px) {
+        .ag-courses_item {
+            -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+        }
+
+        .ag-courses-item_title {
+            min-height: 72px;
+            line-height: 1;
+
+            font-size: 24px;
+        }
+
+        .ag-courses-item_link {
+            padding: 22px 40px;
+        }
+
+        .ag-courses-item_date-box {
+            font-size: 16px;
+        }
+    }
+</style>
+
 <main id="main">
 
+    <div class="p-5" style="background-color: rgb(240, 252, 252);">
+        <h1 class="text-center">Investment Process</h1>
+    </div>
+
+
+    <div class="container" style="padding-left: 10%; padding-right: 10%;">
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+
+                        <strong>Application</strong>
+
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">The application procedure, which is completed by registration through
+                        the website or email, is when we first come into contact with the entrepreneurs and their unique
+                        tech-infused vision.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+
+                        <strong>Screening</strong>
+
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">The choice to be observed or rejected is determined following a review
+                        of the idea's criteria, viability, and capacity to generate a return on investment in several
+                        tiers of the screening process.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+
+                        <strong>Investment Committee</strong>
+
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">By assessing and casting votes, an investment committee is formed. In
+                        light of the screening evaluation, the elected committee members decide whether to move forward
+                        with the idea.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+
+                        <strong>Due Diligence</strong>
+
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">A complete due diligence audit report is produced after the committee's
+                        conclusion. Thus, it makes it possible to specify the idea's legality, intricacy, and
+                        mechanicality.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseThree">
+
+                        <strong>Investment</strong>
+
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">In the end, the investment is approved after all the technicalities and
+                        analyses have been conducted to validate the idea's viability and selected criteria.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseThree">
+
+                        <strong>Exit</strong>
+
+                    </button>
+                </h2>
+                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Initial Public Offerings (IPOs), Strategic Acquisitions, and Management
+                        Buyouts are the three exit strategies that are often used.</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="p-5" style="background-color: rgb(240, 252, 252);">
+        <h1 class="text-center">Preferred Sectors</h1>
+    </div>
+
+    <div class="ag-format-container">
+        <div class="ag-courses_box">
+            <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link">
+                    <div class="ag-courses-item_bg"></div>
+
+                    <div class="ag-courses-item_title">
+                        ITES
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link">
+                    <div class="ag-courses-item_bg"></div>
+
+                    <div class="ag-courses-item_title">
+                        Light Engineering
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link">
+                    <div class="ag-courses-item_bg"></div>
+
+                    <div class="ag-courses-item_title">
+                        Education
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link">
+                    <div class="ag-courses-item_bg"></div>
+
+                    <div class="ag-courses-item_title">
+                        Food Processing
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link">
+                    <div class="ag-courses-item_bg"></div>
+
+                    <div class="ag-courses-item_title">
+                        Agri Tech
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link">
+                    <div class="ag-courses-item_bg"></div>
+
+                    <div class="ag-courses-item_title">
+                        Health Services
+                    </div>
+                </a>
+            </div>
+
+            <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link">
+                    <div class="ag-courses-item_bg">
+                    </div>
+                    <div class="ag-courses-item_title">
+                        Tourism
+                    </div>
+                </a>
+            </div>
+
+            <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link">
+                    <div class="ag-courses-item_bg"></div>
+
+                    <div class="ag-courses-item_title">
+                        Renewable Energy
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link">
+                    <div class="ag-courses-item_bg"></div>
+
+                    <div class="ag-courses-item_title">
+                        Interior Design
+                    </div>
+
+                </a>
+            </div>
+
+        </div>
+    </div>
 
 </main>
 

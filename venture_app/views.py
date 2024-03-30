@@ -35,6 +35,9 @@ def our_purpose(request):
 def our_business(request):
     return render(request, 'venture_app/our_business.html', context={})
 
+def gallery(request):
+    return render(request, 'venture_app/gallery.html', context={})
+
 
 def get_investment(request):
     form = MemberForm()
