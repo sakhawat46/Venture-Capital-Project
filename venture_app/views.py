@@ -2,6 +2,8 @@ from django.shortcuts import render, HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from venture_app.forms import MemberForm, InvestorForm
 from django.contrib import messages
+from venture_app.models import Blog
+
 # Create your views here.
 
 
@@ -21,8 +23,19 @@ def portfolio(request):
     return render(request, 'venture_app/portfolio.html', context={})
 
 
-def news(request):
-    return render(request, 'venture_app/news.html', context={})
+def blog(request):
+    all_blog = Blog.objects.all().order_by('-id')
+    diction = {'all_blog': all_blog}
+    return render(request, 'venture_app/blog.html', context=diction)
+
+
+def blog_details(request, slug):
+
+    # access package without loop in template
+    blog = Blog.objects.get(slug=slug)
+
+    diction = {'blog':blog}
+    return render(request, 'venture_app/blog_details.html', context = diction)
 
 
 def investment_process(request):

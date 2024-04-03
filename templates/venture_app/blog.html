@@ -22,6 +22,8 @@
         </div>
     </section><!-- Breadcrumbs Section -->
 
+
+    {% for row in all_blog %}
     <!-- ======= Portfolio Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details">
         <div class="container">
@@ -33,16 +35,16 @@
                         <div class="swiper-wrapper align-items-center">
 
                             <div class="swiper-slide">
-                                <img src="{% static "assets/img/portfolio/1.jpg" %}" alt="">
+                                <img src="{{ row.blog_image.url }}" alt="">
                             </div>
 
-                            <div class="swiper-slide">
+                            <!-- <div class="swiper-slide">
                                 <img src="{% static "assets/img/portfolio/2.jpg" %}" alt="">
                             </div>
 
                             <div class="swiper-slide">
                                 <img src="{% static "assets/img/portfolio/3.jpg" %}" alt="">
-                            </div>
+                            </div> -->
 
                         </div>
                         <div class="swiper-pagination"></div>
@@ -50,7 +52,8 @@
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="portfolio-info">
+
+                    <!-- <div class="portfolio-info">
                         <h3>Project information</h3>
                         <ul>
                             <li><strong>Category</strong>: Web design</li>
@@ -58,14 +61,16 @@
                             <li><strong>Project date</strong>: 01 March, 2020</li>
                             <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
                         </ul>
-                    </div>
+                    </div> -->
+
                     <div class="portfolio-description">
-                        <h2>This is an example of portfolio detail</h2>
+                        {% comment %} <h2>This is an example of portfolio detail</h2> {% endcomment %}
+                        <a href="{% url 'venture_app:blog_details' slug=row.slug %}" style="color: black;"><h1 class="mt-5 mb-3 font-weight-bold">{{ row.blog_title }}</h1></a>
+
+                        <h6><strong>Publish On: </strong>{{ row.publish_date }}</h6>
+                        <br>
                         <p>
-                            Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore
-                            quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim.
-                            Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi
-                            nulla at esse enim cum deserunt eius.
+                            {{ row.short_description | linebreaks }}
                         </p>
                     </div>
                 </div>
@@ -74,6 +79,8 @@
 
         </div>
     </section><!-- End Portfolio Details Section -->
+
+    {% endfor %}
 
 </main>
 

@@ -69,16 +69,6 @@
 
           </li>
 
-          <li class="dropdown"><a class="nav-link scrollto" href="#about"> <span> Contact </span><i class="bi bi-chevron-down"></i></a>
-
-          <ul>
-            {% comment %} <li><a href="#">Let Us Know</a></li> {% endcomment %}
-            <li><a href="{% url "venture_app:contact_info" %}">Information</a></li>
-            <li><a href="{% url "venture_app:people" %}">Pepole</a></li>
-          </ul>
-
-          </li>
-
 
           <li class="dropdown"><a class="nav-link scrollto" href="#"> <span> Portfolio </span><i class="bi bi-chevron-down"></i></a>
 
@@ -90,11 +80,24 @@
 
           <li class="dropdown"><a href="#"><span>Media</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="{% url "venture_app:news" %}">News</a></li>
+              <li><a href="{% url "venture_app:blog" %}">Blog</a></li>
               <li><a href="{% url "venture_app:gallery" %}">Gallery</a></li>
               {% comment %} <li><a href="#">Events</a></li> {% endcomment %}
             </ul>
           </li>
+
+
+          <li class="dropdown"><a class="nav-link scrollto" href="#about"> <span> Contact </span><i class="bi bi-chevron-down"></i></a>
+
+            <ul>
+              {% comment %} <li><a href="#">Let Us Know</a></li> {% endcomment %}
+              <li><a href="{% url "venture_app:contact_info" %}">Information</a></li>
+              <li><a href="{% url "venture_app:people" %}">Pepole</a></li>
+            </ul>
+  
+          </li>
+
+
           <li><a class="nav-link scrollto" href="{% url "venture_app:invest_now" %}">Invest Now</a></li>
           <li><a class="nav-link getstarted scrollto" href="{% url "venture_app:get_investment" %}">Get Investment</a></li>
           {% comment %} <li><a class="getstarted scrollto" href="#about">Account</a></li> {% endcomment %}
